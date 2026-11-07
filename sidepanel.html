@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Reddit Thread Exporter</title><link rel="stylesheet" href="sidepanel.css"></head>
+<body>
+<header class="top"><div class="brand"><img src="icons/icon32.png" alt="" width="20" height="20"><span>Reddit Thread Exporter</span></div></header>
+<main>
+  <section class="card">
+    <form id="urlform" class="urlrow"><input id="url" type="url" data-tp="url_ph" autocomplete="off"><button id="go" class="primary" data-t="capture"></button></form>
+    <div class="row small">
+      <button type="button" id="usetab" class="link" data-t="use_tab" hidden></button>
+      <label><span data-t="sort"></span> <select id="sort"><option value="confidence">best</option><option value="top">top</option><option value="new">new</option><option value="old">old</option><option value="controversial">controversial</option></select></label>
+      <label class="chk"><input type="checkbox" id="expand"> <span data-t="expand"></span></label>
+    </div>
+    <div id="progress" class="small muted"></div>
+  </section>
+
+  <section id="result" hidden>
+    <div class="card"><div class="row between"><h2 id="title"></h2><button type="button" id="refresh" class="small" data-t="refresh"></button></div>
+      <div id="src" class="small muted"></div><div id="stats" class="stats"></div><div id="warn" class="warn small" hidden></div></div>
+    <div id="settingsbar" class="row between small" hidden><span id="setsum" class="muted"></span><button type="button" id="editset" class="link" data-t="change"></button></div>
+    <nav class="steps" id="steps"></nav>
+
+    <div class="card step" data-step="1">
+      <h3 data-t="s1"></h3>
+      <label class="opt"><input type="checkbox" data-scope="post"><span><b data-t="sc_post"></b><br><span class="muted small" data-t="sc_post_d"></span></span></label>
+      <label class="opt"><input type="checkbox" data-scope="comments"><span><b data-t="sc_comments"></b><br><span class="muted small" data-t="sc_comments_d"></span></span></label>
+      <label class="opt"><input type="checkbox" data-scope="media"><span><b data-t="sc_media"></b><br><span class="muted small" data-t="sc_media_d"></span></span></label>
+    </div>
+
+    <div class="card step" data-step="2" hidden>
+      <h3 data-t="s2"></h3>
+      <div class="grid">
+        <label class="chk"><input type="checkbox" data-f="excludeLinkOnly"> <span data-t="f_link"></span></label>
+        <label class="chk"><input type="checkbox" data-f="includeNegative"> <span data-t="f_neg"></span></label>
+        <label class="chk"><input type="checkbox" data-f="includeDeleted"> <span data-t="f_del"></span></label>
+        <label class="chk"><input type="checkbox" data-f="includeAutomod"> <span data-t="f_bot"></span></label>
+        <label class="chk"><input type="checkbox" data-f="onlyOp"> <span data-t="f_op"></span></label>
+        <label><span data-t="f_depth"></span><input type="number" min="0" data-n="maxDepth" placeholder="∞"></label>
+        <label><span data-t="f_score"></span><input type="number" data-n="minScore" placeholder="–"></label>
+        <label><span data-t="f_max"></span><input type="number" min="1" data-n="maxComments" placeholder="∞"></label>
+      </div>
+    </div>
+
+    <div class="card step" data-step="3" hidden>
+      <div class="row between"><h3 data-t="s3"></h3><span class="small ok" data-t="remembered"></span></div>
+      <div id="fields"></div>
+      <button type="button" id="resetfields" class="link small" data-t="reset"></button>
+    </div>
+
+    <div class="card step" data-step="4" hidden>
+      <h3 data-t="s4"></h3>
+      <div id="summary" class="summary small"></div>
+      <div id="dlblock"><div class="actions"><button id="md" class="primary" data-t="dl_md"></button><button id="json" data-t="dl_json"></button><button id="copy" data-t="copy"></button></div>
+      <div id="copied" class="small ok"></div></div>
+      <div class="small muted" data-t="preview"></div>
+      <ol id="preview" class="preview"></ol>
+    </div>
+    <div class="row between" id="stepnav"><button type="button" id="prev" data-t="prev"></button><button type="button" id="next" class="primary" data-t="next"></button></div>
+  </section>
+</main>
+<script type="module" src="sidepanel.js"></script>
+</body>
+</html>

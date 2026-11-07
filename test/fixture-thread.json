@@ -1,0 +1,11 @@
+[{"kind":"Listing","data":{"children":[{"kind":"t3","data":{"id":"abc123","name":"t3_abc123","title":"Which espresso machine did you regret buying?","selftext":"Looking at [this one](https://example.com/machine) under $600.","author":"op_user","subreddit":"espresso","subreddit_name_prefixed":"r/espresso","created_utc":1790000000,"score":321,"num_comments":7,"permalink":"/r/espresso/comments/abc123/which_espresso/","url":"https://www.reddit.com/r/espresso/comments/abc123/which_espresso/"}}]}},
+ {"kind":"Listing","data":{"children":[
+  {"kind":"t1","data":{"id":"c1","name":"t1_c1","parent_id":"t3_abc123","link_id":"t3_abc123","author":"alice","body":"Get a separate grinder. See https://example.org/grinders.","score":88,"created_utc":1790000100,"depth":0,"permalink":"/r/espresso/comments/abc123/which_espresso/c1/",
+    "replies":{"kind":"Listing","data":{"children":[
+      {"kind":"t1","data":{"id":"c2","name":"t1_c2","parent_id":"t1_c1","author":"op_user","is_submitter":true,"body":"Thanks, that makes sense.","score":5,"created_utc":1790000200,"depth":1,"permalink":"/r/espresso/comments/abc123/which_espresso/c2/"}},
+      {"kind":"more","data":{"parent_id":"t1_c1","count":2,"children":["c5","c6"],"depth":1}}]}}}},
+  {"kind":"t1","data":{"id":"c3","name":"t1_c3","parent_id":"t3_abc123","author":"bob","body":"Fresh comment, score not shown yet","score":1,"score_hidden":true,"created_utc":1790000300,"depth":0,"permalink":"/r/espresso/comments/abc123/which_espresso/c3/"}},
+  {"kind":"t1","data":{"id":"c4","name":"t1_c4","parent_id":"t3_abc123","author":"[deleted]","body":"[removed]","removed_by_category":"moderator","score":2,"created_utc":1790000400,"depth":0,"permalink":"/r/espresso/comments/abc123/which_espresso/c4/"}},
+  {"kind":"t1","data":{"id":"c7","name":"t1_c7","parent_id":"t3_abc123","author":"[deleted]","body":"Still readable after the account was deleted","score":4,"created_utc":1790000500,"depth":0,"permalink":"/r/espresso/comments/abc123/which_espresso/c7/"}},
+  {"kind":"t1","data":{"id":"c8","name":"t1_c8","parent_id":"t3_abc123","author":"mod_person","distinguished":"moderator","body":"Please read the FAQ before posting.","score":10,"created_utc":1790000600,"depth":0,"permalink":"/r/espresso/comments/abc123/which_espresso/c8/"}}
+ ]}}]
