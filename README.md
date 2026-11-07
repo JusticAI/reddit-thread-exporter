@@ -2,6 +2,13 @@
 
 A Chrome extension that exports a whole Reddit thread, including the replies hidden behind "load more comments", to clean Markdown or JSON. Free, no account, MIT licensed.
 
+[中文说明](README.zh-CN.md)
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/panel-dark.png">
+  <img src="docs/panel-light.png" alt="The side panel after capturing a thread: comment counts, then the export steps" width="380">
+</picture>
+
 ## What it does
 
 - Captures every comment and reply it can reach, with its place in the thread, score, date and permalink
@@ -21,9 +28,20 @@ You don't need to run any commands to use it.
 1. Click the green **Code** button above, then **Download ZIP**, and unzip it. (Or `git clone` the repository.)
 2. In Chrome, open `chrome://extensions` and turn on **Developer mode** (top right).
 3. Click **Load unpacked** and choose the unzipped folder (the one with `manifest.json` in it).
-4. Pin the extension, open any Reddit thread and click its icon. The side panel captures the thread; choose Markdown or JSON.
+4. Click the puzzle icon in the toolbar and pin **Reddit Thread Exporter**.
 
-Works in Chrome 116 or later, and in other Chromium browsers with side panels (Edge, Brave). Installed this way it does not update itself: download again to get a new version.
+## Use
+
+1. Open a Reddit thread (a URL with `/comments/` in it), on www.reddit.com or old.reddit.com.
+2. Click the extension icon. The side panel opens and captures the thread, loading the hidden replies; big threads take a little while.
+3. The first time, walk through the four steps: what to include, which comments to keep, which fields, then review. Your choices are remembered, so next time it goes straight to export.
+4. Click **Download Markdown**, **Download JSON** or **Copy Markdown**.
+
+You can also paste a thread link into the box at the top and click **Capture**.
+
+Works in Chrome 116 or later, and in other Chromium browsers with side panels (Edge, Brave). Installed this way it does not update itself: download the ZIP again, replace the folder, and click the reload icon on `chrome://extensions`.
+
+If **Load unpacked** says "Manifest file is missing", you picked the outer folder: choose the folder that directly contains `manifest.json`.
 
 ## Privacy
 
