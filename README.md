@@ -12,14 +12,18 @@ A Chrome extension that exports a whole Reddit thread, including the replies hid
 
 ## Install
 
-From source:
+You don't need to run any commands to use it.
 
-1. Clone this repository
-2. Open `chrome://extensions`, turn on **Developer mode**
-3. Click **Load unpacked** and pick the repository folder
-4. Open a Reddit thread and click the extension icon; the side panel captures the thread
+**Easiest: Chrome Web Store.** [Add Reddit Thread Exporter to Chrome](https://chromewebstore.google.com/detail/jhjdgidelbpfpcmekocnblmdjccfhkaa). It updates itself.
 
-Needs Chrome 116 or later.
+**Or from this repository** (for trying a change, or if you'd rather not use the store):
+
+1. Click the green **Code** button above, then **Download ZIP**, and unzip it. (Or `git clone` the repository.)
+2. In Chrome, open `chrome://extensions` and turn on **Developer mode** (top right).
+3. Click **Load unpacked** and choose the unzipped folder (the one with `manifest.json` in it).
+4. Pin the extension, open any Reddit thread and click its icon. The side panel captures the thread; choose Markdown or JSON.
+
+Works in Chrome 116 or later, and in other Chromium browsers with side panels (Edge, Brave). Installed this way it does not update itself: download again to get a new version.
 
 ## Privacy
 
@@ -29,7 +33,7 @@ Permissions: `sidePanel` (the panel), `downloads` (saving files), `storage` (you
 
 ## Develop
 
-No build step: plain ES modules.
+Only needed if you change the code. No build step and no dependencies: plain ES modules, so edit a file and click the reload icon on `chrome://extensions`. [Node.js](https://nodejs.org/) 18+ runs the tests.
 
 ```
 npm test        # runs test/test.mjs against a synthetic thread
